@@ -1,7 +1,7 @@
-import Main from "./(main)/page";
+import MainSection from "@/components/main/main";
 
 export default function Home() {
   return (
-    <Main />
+    <MainSection />
   );
 }
