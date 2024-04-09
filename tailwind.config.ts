@@ -37,14 +37,14 @@ const config: Config = {
       // font 기본 세팅
       fontSize:{
         titleLarge: [
-          "22px",
+          "28px",
         {
-          fontWeight: 600,
+          fontWeight: 700,
           lineHeight: "28px",
         }
         ],
         titleMedium:[
-          "16px",
+          "20px",
           {
             fontWeight: 500,
             lineHeight: "24px",
