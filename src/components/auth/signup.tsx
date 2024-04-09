@@ -14,7 +14,7 @@ export default function SignupInput() {
             <Input type="password" label="비밀번호 확인" />
             <Select label="멘토 & 멘티 선택" />
             <Input type="text" label="한 줄 소개" />
-            <Button>회원가입</Button>
+            <Button margin={5}>회원가입</Button>
         </div>
     );
 }
