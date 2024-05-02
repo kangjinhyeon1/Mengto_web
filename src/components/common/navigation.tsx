@@ -13,8 +13,8 @@ export default function Navigation() {
                 <p onClick={() => setNavigate(true)} className={`${navigate ? 'text-main' : 'text-gray-700'} cursor-pointer`}>공부 팁</p>
             </div>
             <div className="w-[10%]">
-                <Button>작성하기</Button>
+                <Button margin="none">작성하기</Button>
             </div>
         </div>
     );
-}
+}   

@@ -11,7 +11,7 @@ export default function AddInput() {
             <Input type="text" label="닉네임" />
             <Select label="멘토 & 멘티 선택" />
             <Input type="text" label="한 줄 소개" />
-            <Button>저장하기</Button>
+            <Button margin="0">저장하기</Button>
         </div>
     );
 }

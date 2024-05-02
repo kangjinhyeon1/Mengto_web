@@ -1,20 +1,22 @@
 "use client"
 
+import { useRouter } from "next/navigation";
 import Button from "../common/button";
 import Input from "../common/input";
 import Select from "../common/select";
 
 export default function SignupInput() {
+    const router = useRouter()
     return (
         <div className="w-[22%] flex flex-col items-center gap-8 min-w-[300px]">
-            <img src="/img/Title.svg" className="w-25" />
+            <img src="/img/Title.svg" className='w-25 cursor-pointer' onClick={() => router.push('/')} />
             <Input type="text" label="닉네임" />
             <Input type="text" label="이메일" />
             <Input type="password" label="비밀번호" />
             <Input type="password" label="비밀번호 확인" />
             <Select label="멘토 & 멘티 선택" />
             <Input type="text" label="한 줄 소개" />
-            <Button margin={5}>회원가입</Button>
+            <Button margin="small">회원가입</Button>
         </div>
     );
 }
