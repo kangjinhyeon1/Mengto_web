@@ -1,9 +1,11 @@
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Button from "./button";
 
 export default function Navigation() {
 
     const [navigate, setNavigate] = useState<boolean>(false);
+    const nav = useRouter();
 
     return (
         <div className="w-[70%] mt-16 flex justify-between items-center">
@@ -12,7 +14,7 @@ export default function Navigation() {
                 <div className='w-[2px] h-6 bg-sub rounded-[10px]' />
                 <p onClick={() => setNavigate(true)} className={`${navigate ? 'text-main' : 'text-gray-700'} cursor-pointer`}>공부 팁</p>
             </div>
-            <div className="w-[10%]">
+            <div className="w-[10%]" onClick={() => nav.push('write')}>
                 <Button margin="none">작성하기</Button>
             </div>
         </div>
