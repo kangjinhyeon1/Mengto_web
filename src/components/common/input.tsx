@@ -2,11 +2,12 @@
 interface InputType {
     type: "text" | "password";
     label: string;
+    placeholder?: string;
 }
 
-export default function Input({ type, label }: InputType) {
+export default function Input({ type, label, placeholder }: InputType) {
     return (
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full gap-2">
             <label className='text-titleMedium text-gray-700'>{label}</label>
             <input
                 className="
@@ -21,6 +22,7 @@ export default function Input({ type, label }: InputType) {
                 p-3
                 "
                 type={type}
+                placeholder={placeholder}
             />
         </div>
     );
