@@ -15,7 +15,7 @@ export default function Navigation() {
                 <p onClick={() => setNavigate(true)} className={`${navigate ? 'text-main' : 'text-gray-700'} cursor-pointer`}>공부 팁</p>
             </div>
             <div className="w-[10%]" onClick={() => nav.push('write')}>
-                <Button margin="none">작성하기</Button>
+                <Button onClick={()=>nav.push('/write')} margin="none">작성하기</Button>
             </div>
         </div>
     );

@@ -1,11 +1,17 @@
 "use client"
+
+import React from "react";
+
 interface InputType {
     type: "text" | "password";
     label: string;
     placeholder?: string;
+    name: string;
+    value: string;
+    onChange: (e:React.ChangeEvent<HTMLInputElement>)=>void;
 }
 
-export default function Input({ type, label, placeholder }: InputType) {
+export default function Input({ type, label, placeholder, name, value, onChange }: InputType) {
     return (
         <div className="flex flex-col w-full gap-2">
             <label className='text-titleMedium text-gray-700'>{label}</label>
@@ -23,6 +29,9 @@ export default function Input({ type, label, placeholder }: InputType) {
                 "
                 type={type}
                 placeholder={placeholder}
+                name={name}
+                value={value}
+                onChange={onChange}
             />
         </div>
     );

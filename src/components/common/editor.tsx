@@ -35,42 +35,42 @@ const Editor = dynamic(
 
             const fileInput = useRef<HTMLInputElement | null>(null);
 
-            async function changeHandler(event: ChangeEvent<HTMLInputElement>) {
-                if (fileInput.current?.files) {
-                    const files: FileList = fileInput.current.files;
-                    const formData = new FormData();
+            // async function changeHandler(event: ChangeEvent<HTMLInputElement>) {
+            //     if (fileInput.current?.files) {
+            //         const files: FileList = fileInput.current.files;
+            //         const formData = new FormData();
 
-                    for (let i = 0; i < files.length; i++) {
-                        const file = files[i];
-                        formData.append("file", file, file.name);
-                    }
+            //         for (let i = 0; i < files.length; i++) {
+            //             const file = files[i];
+            //             formData.append("file", file, file.name);
+            //         }
 
-                    // try {
-                    //     const res = await api.post("/api/main/image-upload/", formData, {
-                    //         headers: {
-                    //             "Content-Type": "multipart/form-data",
-                    //         },
-                    //     });
-                    //     if (typeof forwardedRef !== "function") {
-                    //         const editor = (forwardedRef?.current as ReactQuill).getEditor();
+            //         try {
+            //             const res = await api.post("/api/main/image-upload/", formData, {
+            //                 headers: {
+            //                     "Content-Type": "multipart/form-data",
+            //                 },
+            //             });
+            //             if (typeof forwardedRef !== "function") {
+            //                 const editor = (forwardedRef?.current as ReactQuill).getEditor();
 
-                    //         res.data.forEach((imgUrl: string) => {
-                    //             const range = editor.getSelection();
-                    //             const index = range ? range.index : 0;
-                    //             editor.insertEmbed(index, "image", `${process.env.NEXT_PUBLIC_API_URL + imgUrl}`);
+            //                 res.data.forEach((imgUrl: string) => {
+            //                     const range = editor.getSelection();
+            //                     const index = range ? range.index : 0;
+            //                     editor.insertEmbed(index, "image", `${process.env.NEXT_PUBLIC_API_URL + imgUrl}`);
 
-                    //             editor.setSelection(index + 1);
-                    //         });
-                    //     }
-                    // } catch (error) {
-                    //     console.error(error);
+            //                     editor.setSelection(index + 1);
+            //                 });
+            //             }
+            //         } catch (error) {
+            //             console.error(error);
 
-                    //     return error;
-                    // }
-                }
+            //             return error;
+            //         }
+            //     }
 
-                return;
-            }
+            //     return;
+            // }
 
             const modules = useMemo(() => {
                 return {
@@ -89,10 +89,10 @@ const Editor = dynamic(
                             ],
                         ],
                     },
-                    imageResize: {
-                        parchment: QuillComponent.Quill.import("parchment"),
-                        modules: ["Resize", "DisplaySize"],
-                    },
+                    // imageResize: {
+                    //     parchment: QuillComponent.Quill.import("parchment"),
+                    //     modules: ["Resize", "DisplaySize"],
+                    // },
                 };
             }, []);
 

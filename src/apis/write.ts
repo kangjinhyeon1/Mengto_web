@@ -1,12 +1,10 @@
-'use server'
-
-import { signupType } from '@/types'
+import { writeType } from '@/types'
 import { instance } from './interceptor'
 
-export const SignupAPI = async (data: signupType) => {
+export const WriteAPI = async (data: writeType) => {
   return await instance({
     method: 'POST',
-    url: `/auth/signup`,
+    url: `/user/write`,
     data: data,
   })
     .then((response) => {
