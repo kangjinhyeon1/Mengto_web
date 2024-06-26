@@ -1,24 +1,24 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       // color 기본 세팅
-      colors:{
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+      colors: {
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
         btn: {
-          background: "hsl(var(--btn-background))",
-          "background-hover": "hsl(var(--btn-background-hover))",
+          background: 'hsl(var(--btn-background))',
+          'background-hover': 'hsl(var(--btn-background-hover))',
         },
         main: '#97A9FF',
         sub: '#888EBA',
-        gray:{
+        gray: {
           900: '#181919',
           800: '#313233',
           700: '#494B4C',
@@ -28,64 +28,75 @@ const config: Config = {
           300: '#ACB1B3',
           200: '#C4C9CC',
           100: '#E6E9EB',
-          50: '#F2F4F5'
+          50: '#F2F4F5',
         },
+        attention: '#3349D8',
+        success: '#2C8C1C',
+        coution: '#B75F00',
+        critical: '#DB2C36',
+        modalBackground: 'rgba(9, 19, 47, 0.08)',
+        attentionBackground: '#EFF4F4',
+        successBackground: '#E7FAD4',
+        coutionBackground: '#FFF2CC',
+        criticalBackground: '#FFE6D8',
+        criticalMiddle: '#F3AAAA',
+        transparent: 'transparent',
       },
-      boxShadow:{
-        'm': '0 4px 4px 0 #C4C9CC'
+      boxShadow: {
+        m: '0 4px 4px 0 #C4C9CC',
       },
       // font 기본 세팅
-      fontSize:{
+      fontSize: {
         titleLarge: [
-          "28px",
-        {
-          fontWeight: 700,
-          lineHeight: "28px",
-        }
+          '28px',
+          {
+            fontWeight: 700,
+            lineHeight: '28px',
+          },
         ],
-        titleMedium:[
-          "20px",
+        titleMedium: [
+          '20px',
           {
             fontWeight: 500,
-            lineHeight: "24px",
-            letterSpacing: "0.15%"
-          }
+            lineHeight: '24px',
+            letterSpacing: '0.15%',
+          },
         ],
-        titleSmall:[
-          "14px",
+        titleSmall: [
+          '14px',
           {
             fontWeight: 500,
-            lineHeight: "20px",
-            letterSpacing: "0.1%"
-          }
+            lineHeight: '20px',
+            letterSpacing: '0.1%',
+          },
         ],
-        bodyLarge:[
-          "16px",
+        bodyLarge: [
+          '16px',
           {
             fontWeight: 400,
-            lineHeight: "24px",
-            letterSpacing: "0.5%"
-          }
+            lineHeight: '24px',
+            letterSpacing: '0.5%',
+          },
         ],
-        bodyMeidum:[
-          "14px",
+        bodyMeidum: [
+          '14px',
           {
             fontWeight: 400,
-            lineHeight: "20px",
-            letterSpacing: "0.25%"
-          }
+            lineHeight: '20px',
+            letterSpacing: '0.25%',
+          },
         ],
-        bodySmall:[
-          "12px",
+        bodySmall: [
+          '12px',
           {
             fontWeight: 400,
-            lineHeight: "16px",
-            letterSpacing: "0.4%"
-          }
+            lineHeight: '16px',
+            letterSpacing: '0.4%',
+          },
         ],
-      }
+      },
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config

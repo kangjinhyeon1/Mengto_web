@@ -1,19 +1,20 @@
 'use server'
 
-import { writeType } from '@/types'
 import { cookies } from 'next/headers'
 import { instance } from './interceptor'
 
-export const WriteAPI = async (data: writeType) => {
+export const DeleteWrite = async (id: number | undefined) => {
   const token = cookies().get('accessToken')
 
   return await instance({
-    method: 'POST',
-    url: `/user/write`,
+    method: 'DELETE',
+    url: `/user/write/delete`,
     headers: {
       Authorization: token?.value,
     },
-    data: data,
+    data: {
+      writeId: id,
+    },
   })
     .then((response) => {
       return response.data
